@@ -1,0 +1,1047 @@
+/*Cover page*/
+.hero {
+    height: 100vh;
+    position: relative;
+}
+
+.hero-img {
+    width: 1250px;
+    height: 700px;
+    object-fit: cover;
+    margin-bottom: -100px;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 5.2rem;
+    transform: translate(-50%, -50%);
+    color: rgb(116, 109, 109);
+    font-family: Roboto;
+}
+
+/*Video*/
+.highlights {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.highlight-video {
+    width: 80%;
+    height: auto;
+    transform: scale(1);
+    transition: transform 0.5s ease-out;
+    will-change: transform;
+    display: block;
+}
+
+/* Endorsements Section */
+.endorsement h2 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 0.3rem;
+}
+
+.endorsement {
+  padding: 2rem;
+  background-color: black;
+}
+
+.endorsement-logos {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  padding: 2rem;
+  scroll-snap-type: x mandatory;
+}
+
+.logo-container.shift-left {
+  transform: translateX(-100px);
+  z-index: 0;
+}
+
+.logo-container.shift-right {
+  transform: translateX(100px);
+  z-index: 0;
+}
+
+.logo-container.active {
+  flex: 0 0 300px;
+  background-color: #111;
+  flex-grow: 1;
+  z-index: 10;
+}
+
+.endorsement-panel h2,
+.endorsement-panel p {
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.logo-container.expanded {
+  width: 600px;
+  background-color: #111;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.logo-container.expanded img {
+  max-width: 40%;
+  max-height: 50%;
+}
+
+.logo-container .endorsement-description {
+  display: none;
+  color: white;
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.logo-container.expanded .endorsement-description {
+  display: block;
+}
+
+.logo-container.shrunk {
+  width: 100px;
+  opacity: 0.4;
+  filter: blur(2px);
+  pointer-events: none;
+}
+
+.endorsement-logos {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 0;
+  padding: 2rem;
+  overflow-x: auto;
+  transition: all 0.4s ease;
+}
+
+.logo-container {
+  flex: 0 0 200px;
+  width: 250px;
+  height: 500px;
+  background-color: #222;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
+  z-index: 1;
+}
+
+.logo-container:hover {
+  transform: scale(1.05);
+  z-index: 5;
+}
+
+.logo-container .endorsement-panel {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1rem;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  color: white;
+  animation: fadeIn 0.4s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to {opacity: 1; transform: translateY(0); }
+}
+
+.logo-container.active .endorsement-panel {
+  opacity: 1;
+}
+
+.endorsement-panel h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.endorsement-panel p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  max-width: 90%;
+}
+
+/* Unique background colors */
+.logo-container.Adidas {
+  background-color: #ffffff;
+}
+
+.logo-container.FootLocker {
+  background-color: #000000;
+}
+
+.logo-container.BBDD {
+  background-color: #ffffff;
+}
+
+.logo-container.Aura {
+  background-color: #0267ff;
+}
+
+.logo-container.Bose {
+  background-color: #ffffff;
+}
+
+.logo-container img {
+    max-width: 90%;
+  max-height: 80%;
+  object-fit: contain;
+  transition: all 0.3s ease;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'machina';
+}
+
+html, body, main{
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: 100%;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+p {
+    width: 50%;
+    margin: 2rem 0;
+}
+
+section{
+    background-color: black;
+    color: white;
+    height: 100vh;
+}
+
+.container{
+    padding: 5rem;
+}
+
+/*Horizontal The Philanthropist*/
+
+.image-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    background-color: rgb(255, 255, 255);
+}
+
+.image-container img {
+    width: 100%;
+    display: block;
+}
+
+.text-overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    font-size: 2rem;
+    background-color: rgba(0,0,0,0.5);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/*Horizontal scroll*/
+.sticky_parent{
+    height: 500vh;
+}
+
+.sticky{
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+
+.scroll_section{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 500vw;
+    display: flex;
+    gap: 5vw;
+    padding: 0 5vw;
+    will-change: transform;
+}
+
+img {
+    width: 400px;
+    height: 80%;
+    object-fit: cover;
+    object-position: center;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .container {
+        padding: 1rem;
+    }
+    p {
+        width: 90%;
+    }
+    img {
+        width: 300px;
+    }
+}
+
+.scroll-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Horizontal scroll — Businessman */
+.BusinessmanSticky_Parent {
+  height: 500vh;
+}
+
+.BusinessmanSticky {
+  overflow: hidden;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+.BusinessmanScroll_section {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: max-content;
+  display: flex;
+  gap: 5vw;
+  padding-left: 0;
+  will-change: transform;
+}
+
+.BusinessmanScroll_section .slide {
+  display: flex;
+  align-items: center;
+  width: 1800px;
+  margin-right: 50px;
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+}
+
+.BusinessmanScroll_section img {
+  width: 60%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
+
+.BusinessmanScroll_section .caption {
+  margin-left: 30px;
+  font-size: 2rem;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+}
+
+.BusinessmanScroll_section img.small1 {
+  height: 1200px;
+  width: 1200px;
+  margin-top: 600px;
+}
+
+.BusinessmanScroll_section img.small2 {
+  width:50%; 
+  height: 100%;
+  padding-left: 100px;
+}
+
+.BusinessmanScroll_section img.small3 {
+  height: 70%;
+}
+.BusinessmanScroll_section img.big1 {
+  width: 55%;
+  height: auto;
+}
+
+.BusinessmanSticky_Parent {
+  background-color: white;
+}
+
+.businessman {
+  background-color: white !important; /* solid white */
+  padding: 20px;
+  display: inline-block;
+  white-space: nowrap;
+  color: rgb(255, 255, 255) !important; /* black text */
+}
+
+.businessman * {
+  color: rgb(255, 255, 255) !important; /* makes sure all child elements' text is black */
+  background-color: transparent; /* removes stripes from inner elements */
+}
+
+.businessman-text {
+  writing-mode: horizontal-tb;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+/* Keep 'The Businessman' text horizontal next to image */
+.BusinessmanScroll_section .slide:first-child {
+  display: flex;
+  align-items: center;
+  gap: 20px;         /* space between image and text */
+}
+
+.BusinessmanScroll_section .slide:first-child img.small1 {
+  flex: 0 0 auto;    /* image keeps natural size */
+}
+
+.BusinessmanScroll_section .slide:first-child .caption {
+  flex: 1;           /* take remaining width */
+  white-space: normal;
+  line-height: 1.4;
+}
+
+/* Let slides size to content (no squish) */
+.BusinessmanScroll_section .slide {
+  flex: 0 0 auto;           /* don't let container shrink */
+  gap: 24px;                /* space between image and text */
+}
+
+/* First slide only: make it wider so caption has room */
+.BusinessmanScroll_section .slide:first-child {
+  width: 1830px;            /* adjust until it feels right (e.g., 2400–3000px) */
+}
+
+/* Keep the big image size you want, but don't let it steal caption space */
+.BusinessmanScroll_section .slide:first-child img.small1 {
+  flex: 0 0 auto;           /* preserve its size */
+}
+
+/* Make the caption actually use the remaining width, horizontally */
+.BusinessmanScroll_section .slide:first-child .caption {
+  flex: 1 1 auto;           
+  white-space: normal;      
+  word-break: break-word;
+  line-height: 1.4;
+  max-width: 60ch;          /* readable line length */
+}
+
+/* Overlay Modal Styling */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: opacity 0.3s ease;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  text-align: center;
+  max-width: 600px;
+  padding: 40px;
+  background-color: #111;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255,255,255,0.2);
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 16px;
+  font-size: 24px;
+  background: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/*Collage after philanthropist before bussinessman*/
+.Ant-collage {
+  background-color: rgb(0, 0, 0);
+  padding: 4rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.collage-wrapper {
+  display: flex;
+  gap: 2rem;
+  max-width: 1400px;
+width: 100%;
+align-items: stretch;
+}
+
+.collage-left video {
+  width: 100%;
+  height: 650px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.collage-left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.collage-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: flex-start;
+}
+
+.collage-right img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.collage-right img:nth-child(1) {
+  margin-top: 0px;
+}
+
+.collage-right img:nth-child(2) {
+  margin-top: -30px;
+}
+
+.collage-left,
+.collage-right {
+  flex: 1;
+}
+
+
+
+/*The Man horizontal scroll*/
+.ManSticky_Parent {
+  height: 500vh;
+}
+
+.ManSticky {
+  overflow: hidden;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+.ManScroll_section {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: max-content;
+  display: flex;
+  gap: 5vw;
+  padding-left: 0;
+  will-change: transform;
+}
+
+.ManScroll_section .slide {
+  display: flex;
+  align-items: center;
+  width: 1800px;
+  margin-right: 50px;
+  background-color: rgb(0, 0, 0);
+  padding: 20px;
+}
+
+.ManScroll_section img {
+  width: 60%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
+
+.ManScroll_section .caption {
+  margin-left: 30px;
+  font-size: 2rem;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+
+.ManScroll_section img.small1 {
+  height: 1000px;
+  width: 1300px;
+  margin-top: 250px;
+}
+
+.ManScroll_section img.small2 {
+  width:50%; 
+  height: 100%;
+  padding-left: 100px;
+}
+
+.ManScroll_section img.small3 {
+  height: 70%;
+}
+.ManScroll_section img.big1 {
+  height: 1000px;
+  margin-top: 500px;
+  width: 1000px;
+}
+
+.ManScroll_section img.big2 {
+  height: 1000px;
+  margin-top: 300px;
+  width: 1000px;
+}
+
+.ManScroll_section img.big3 {
+  height: 1000px;
+  margin-top: 200px;
+  width: 1000px;
+}
+
+
+.ManSticky_Parent {
+  background-color: rgb(0, 0, 0);
+}
+
+.Man {
+  background-color: rgb(0, 0, 0) !important; /* solid white */
+  padding: 20px;
+  display: inline-block;
+  white-space: nowrap;
+  color: black !important; /* black text */
+}
+
+.Man * {
+  color: black !important; /* makes sure all child elements' text is black */
+  background-color: transparent; /* removes stripes from inner elements */
+}
+
+.Man-text {
+  writing-mode: horizontal-tb;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+/* Keep 'The Businessman' text horizontal next to image */
+.ManScroll_section .slide:first-child {
+  display: flex;
+  align-items: center;
+  gap: 20px;         /* space between image and text */
+}
+
+.ManScroll_section .slide:first-child img.small1 {
+  flex: 0 0 auto;    /* image keeps natural size */
+}
+
+.ManScroll_section .slide:first-child .caption {
+  flex: 1;           /* take remaining width */
+  white-space: normal;
+  line-height: 1.4;
+}
+
+/* Let slides size to content (no squish) */
+.ManScroll_section .slide {
+  flex: 0 0 auto;           /* don't let container shrink */
+  gap: 24px;                /* space between image and text */
+}
+
+/* First slide only: make it wider so caption has room */
+.ManScroll_section .slide:first-child {
+  width: 1830px;            /* adjust until it feels right (e.g., 2400–3000px) */
+}
+
+/* Keep the big image size you want, but don't let it steal caption space */
+.ManScroll_section .slide:first-child img.small1 {
+  flex: 0 0 auto;           /* preserve its size */
+}
+
+/* Make the caption actually use the remaining width, horizontally */
+.ManScroll_section .slide:first-child .caption {
+  flex: 1 1 auto;           
+  white-space: normal;      
+  word-break: break-word;
+  line-height: 1.4;
+  max-width: 60ch;          /* readable line length */
+}
+
+/*Ant Appearances*/
+.Ant-collage2 {
+  background: #000000;
+  color: #ffffff;
+  padding: 4rem 2rem;
+  height: auto;
+  position: relative;
+  z-index: 1;
+  isolation: isolate;
+}
+
+.collage2 {
+  display: grid;
+  grid-template-columns: 1.2fr 2fr;
+  grid-template-rows: repeat(2, minmax(220px, 1fr));
+  gap: 2rem;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.tile-left { grid-column: 1; grid-row: 1 / span 2; }
+
+.tile-right-grid {
+  grid-column:2;
+  grid-row: 1 / span 2;                      
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: minmax(220px, 1fr);
+  gap: 2rem;
+}
+
+.tile { 
+  background:#111; 
+  border-radius: 16px; 
+  overflow: hidden;
+  display: flex; 
+  flex-direction: column; 
+}
+
+.tile img, 
+.tile video {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  display: block;
+}
+
+.tile figcaption {
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+/* Big left spans two rows */
+.tile-left { grid-row: 1 / span 2; grid-column: 1; }
+.tile-left img { aspect-ratio: auto; height: 100%; }
+
+/* Make sure it never collides with sticky sections */
+.ManSticky_Parent { margin-bottom: 64px; }      /* space after The Man */
+.Ant-collage2   { margin-top: 0; }          /* start immediately */
+.sticky_parent + .Ant-collage2 { margin-top: 64px; } /* safety if before a sticky */
+
+@media (max-width: 900px) {
+  .collage2 { grid-template-columns: 1fr; grid-template-rows: auto; }
+  .tile-right-grid { grid-column: auto; grid-row: auto; grid-template-columns: 1fr; }
+}
+
+/*FootLocker ad*/
+.FootLockerAd {
+  max-width: 1200px;
+  display: block;
+  border-radius: 16px;
+  margin: 0 auto;
+}
+
+.FootLocker-wrap {
+  position: relative;
+  background: #000;
+  padding: 1rem 0;
+}
+
+.unmute-btn {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  padding: 10px 14px;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(255,255,255,.9);
+  font-size: 14px;
+  cursor: pointer;
+}
+.unmute-btn.hidden { display: none; }
+
+/* Force all-black inside "The Man" */
+.ManSticky_Parent { background: #000 !important; }
+.ManSticky { background: #000 !important; }
+.ManScroll_section { background: #000 !important; }
+.ManScroll_section .slide { background: #000 !important; }
+
+/* Horizontal scroll — The Athelete */
+.AtheleteSticky_Parent {
+    height: 500vh;
+}
+
+.AtheleteSticky {
+  overflow: hidden;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+.AtheleteScroll_section {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: max-content;
+  display: flex;
+  gap: 5vw;
+  padding-left: 0;
+  will-change: transform;
+}
+
+.AtheleteScroll_section .slide {
+  display: flex;
+  align-items: center;
+  width: 1800px;
+  margin-right: 50px;
+  background-color: rgb(255, 255, 255); /*Change background color*/
+  padding: 20px;
+}
+
+.AtheleteScroll_section img {
+  width: 60%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
+
+.AtheleteScroll_section .caption {
+  margin-left: 30px;
+  font-size: 2rem;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+}
+
+.AtheleteScroll_section img.athletesmall1 {
+  height: 800px;
+  width: 1600px;
+  margin-top: 125px;
+}
+
+.AtheleteScroll_section img.athletesmall2 {
+  width:750px; 
+  height: 750px;
+  padding-left: 100px;
+}
+
+.AtheleteScroll_section img.athletesmall4 {
+  height: 1000px;
+  margin-top: 300px;
+}
+
+.AtheleteScroll_section img.athletesmall5 {
+  margin-top: 300px;
+  height: 1000px;
+  width: 1000px;
+}
+
+.AtheleteScroll_section img.athletesmall6 {
+  margin-top: 300px;
+  height: 1000px;
+  width: 1000px;
+}
+
+
+.AtheleteScroll_section img.athletebig5 {
+  width: 550px;
+  height: 700px;
+}
+
+.AtheleteScroll_section img.athleteBig6 {
+  width: 550px;
+  height: 700px;
+}
+
+.AtheleteScroll_section img.athleteBig7 {
+  width: 550px;
+  height: 700px;
+}
+
+.AtheleteSticky_Parent {
+  background-color: white;
+}
+
+.Athelete {
+  background-color: white !important; /* solid white */
+  padding: 20px;
+  display: inline-block;
+  white-space: nowrap;
+  color: rgb(255, 255, 255) !important; /* black text */
+}
+
+.Athelete * {
+  color: rgb(255, 255, 255) !important; /* makes sure all child elements' text is black */
+  background-color: transparent; /* removes stripes from inner elements */
+}
+
+.Athelete-text {
+  writing-mode: horizontal-tb;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+/* Keep 'The Businessman' text horizontal next to image */
+.AtheleteScroll_section .slide:first-child {
+  display: flex;
+  align-items: center;
+  gap: 20px;         /* space between image and text */
+}
+
+.AtheleteScroll_section .slide:first-child img.small1 {
+  flex: 0 0 auto;    /* image keeps natural size */
+}
+
+.AtheleteScroll_section .slide:first-child .caption {
+  flex: 1;           /* take remaining width */
+  white-space: normal;
+  line-height: 1.4;
+}
+
+/* Let slides size to content (no squish) */
+.AtheleteScroll_section .slide {
+  flex: 0 0 auto;           /* don't let container shrink */
+  gap: 24px;                /* space between image and text */
+}
+
+/* First slide only: make it wider so caption has room */
+.AtheleteScroll_section .slide:first-child {
+  width: 1830px;            /* adjust until it feels right (e.g., 2400–3000px) */
+}
+
+/* Keep the big image size you want, but don't let it steal caption space */
+.AtheleteScroll_section .slide:first-child img.small1 {
+  flex: 0 0 auto;           /* preserve its size */
+}
+
+/* Make the caption actually use the remaining width, horizontally */
+.AtheleteScroll_section .slide:first-child .caption {
+  flex: 1 1 auto;           
+  white-space: normal;      
+  word-break: break-word;
+  line-height: 1.4;
+  max-width: 60ch;          /* readable line length */
+}
+
+/*Socials*/
+
+.socials-section {
+  background: #000;
+  color: white;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.socials-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  letter-spacing: 1px;
+}
+
+.socials-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.social-btn {
+  display: inline-block;
+  align-items: center;
+  gap: 10px;
+  background: #111;
+  padding: 1rem 2rem;
+  border-radius: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+  position: relative;
+  overflow: hidden;
+
+}
+
+.social-btn img {
+  display: block;
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.social-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0,0,0,0.6);
+  padding: 15px;
+  border-radius: 50%;
+}
+
+.social-icon img {
+  width: 50px;
+  height: 50px;
+}
+
+.social-btn:hover img {
+  filter: brightness(0.6);
+}
+
+.social-btn:hover .social-icon {
+  background: rgba(0,0,0,0.8);
+  transform: translate(-50%, -50%) scale(1.1);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.social-btn.instagram:hover {
+  background: #e1306c;
+  transform: scale(1.05);
+}
+
+.social-btn.twitter:hover {
+  background: #1da1f2;
+  transform: scale(1.05);
+}
+
+.social-btn.podcast:hover {
+  background: #8e44ad;
+  transform: scale(1.05);
+}
